@@ -1,5 +1,7 @@
 # Hubot
 
+Rocket.Chat documentation [Run a Hubot bot](https://docs.rocket.chat/guides/bots/create-and-run-a-bot/hubot-bot).
+
 Use @hubot (or what you have at `ROCKETCHAT_USER` in `.env` file).
 
  - `help` [Documentation of hubot-help](https://github.com/hubotio/hubot-help)
