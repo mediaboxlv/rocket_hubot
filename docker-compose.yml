@@ -3,7 +3,7 @@ services:
   # hubot, the popular chatbot (add the bot user first and change the password before starting this image)
   hubot:
     image: rocketchat/hubot-rocketchat:latest
-    container_name: ${PROJECTSHORT_NAME}_hubot
+    container_name: ${PROJECTSHORT_NAME}hubot
     restart: unless-stopped
     environment:
       - ROCKETCHAT_URL=${ROCKETCHAT_URL}
@@ -15,8 +15,8 @@ services:
       - EXTERNAL_SCRIPTS=${EXTERNAL_SCRIPTS}
     # depends_on:
     #   - rocketchat
-    # labels:
-    #   - "traefik.enable=false"
+    labels:
+      - "traefik.enable=false"
     volumes:
       - ${SCRIPTS_PATH_HOST}:/home/hubot/scripts
   # this is used to expose the hubot port for notifications on the host on port 3001, e.g. for hubot-jenkins-notifier
